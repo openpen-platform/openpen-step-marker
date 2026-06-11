@@ -1,0 +1,9 @@
+{
+  "id": "@openpen/step-marker",
+  "name": "Step Marker",
+  "version": "1.0.0",
+  "author": "OpenPen",
+  "description": "Click to drop sequentially numbered circular markers for step-by-step annotations. Numbering follows the canvas marker count, so undo automatically rolls the next number back.",
+  "minAppVersion": "1.0.0",
+  "renderer": "dist/renderer.js"
+}

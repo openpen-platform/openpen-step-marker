@@ -1,0 +1,10 @@
+{
+  "name": "Step Marker",
+  "description": "Click to drop sequentially numbered circular markers for step-by-step annotations. Numbering follows the canvas marker count, so undo automatically rolls the next number back.",
+  "tool": "Step Marker",
+  "settings": {
+    "size": "Size",
+    "fillColor": "Fill color",
+    "textColor": "Text color"
+  }
+}
