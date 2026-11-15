@@ -5,6 +5,12 @@ A numbered step marker tool for [OpenPen](https://github.com/openpen-platform/op
 Click to drop sequentially numbered circular markers (1, 2, 3, ...) for
 step-by-step annotations such as walkthroughs and tutorials.
 
+<p align="center">
+  <img src=".github/readme-demo.gif" alt="OpenPen Step Marker: clicking places numbered markers 1 and 2 on a settings page, a misplaced 3 is undone and placed again, and the number stays 3" width="800" />
+</p>
+
+<p align="center"><sub>Background adapted from the Tabler admin template (https://github.com/tabler/tabler), MIT License (https://opensource.org/license/mit). Changes: text replaced, demo navigation hidden; names and data are fictional.</sub></p>
+
 ## Install
 
 Requires OpenPen 1.0.0 or later.
