@@ -47,6 +47,28 @@ function paintMarker(
   ctx.restore()
 }
 
+/**
+ * The finished marker Stroke centred on `center`, numbered from the live
+ * canvas marker count. Shared by the pointer tool and the MCP place tool so a
+ * marker an agent places is the same stroke a manual click makes.
+ */
+export function buildStepMarkerStroke(
+  center: Point,
+  style: StrokeStyle,
+  marker: StepMarkerStyle,
+): Stroke {
+  return {
+    id: crypto.randomUUID(),
+    tool: STEP_MARKER_TOOL_ID,
+    points: [{ ...center }],
+    style: { ...style },
+    seq: deriveSeq(getAllStrokes()),
+    size: marker.size,
+    fillColor: marker.fillColor,
+    textColor: marker.textColor,
+  }
+}
+
 export function createStepMarkerTool(opts: StepMarkerToolOptions): Tool {
   let lastStyle: StrokeStyle | null = null
   // A marker drops on the press point, not the release point: committing from
@@ -70,20 +92,7 @@ export function createStepMarkerTool(opts: StepMarkerToolOptions): Tool {
       lastStyle = null
       downPoint = null
       if (!style || !center) return null
-
-      const marker = opts.style()
-      const seq = deriveSeq(getAllStrokes())
-
-      return {
-        id: crypto.randomUUID(),
-        tool: STEP_MARKER_TOOL_ID,
-        points: [center],
-        style,
-        seq,
-        size: marker.size,
-        fillColor: marker.fillColor,
-        textColor: marker.textColor,
-      }
+      return buildStepMarkerStroke(center, style, opts.style())
     },
   }
 }

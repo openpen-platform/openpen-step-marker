@@ -7,6 +7,8 @@
  *   - A crosshair-style cursor for `ui.cursors`.
  *   - A tool button in the control bar 'tools' group.
  *   - A settings panel (size + fill / text color) for `ui.settings.panels`.
+ *   - The MCP tool `place` (`openpen.step-marker__place` for agents) and its
+ *     usage guide: an agent places the same marker stroke a manual click makes.
  *
  * Size / colors are config (not in-progress stroke state), so they live in a
  * module-scoped holder hydrated from settings in setup(); the tool factory
@@ -20,6 +22,8 @@ import {
   renderStepMarkerStroke,
   type StepMarkerStyle,
 } from './step-marker-tool'
+import { createStepMarkerPlaceTool, STEP_MARKER_MCP_GUIDE } from './mcp-place-tool'
+import { currentPenStyle, trackPenStyle } from './pen-style'
 import StepMarkerToolButton from './StepMarkerToolButton.vue'
 import StepMarkerSettingsPanel from './StepMarkerSettingsPanel.vue'
 import en from './locales/en.json'
@@ -40,9 +44,10 @@ const liveSettings: StepMarkerStyle = {
   textColor: '#ffffff',
 }
 
-const stepMarkerTool = createStepMarkerTool({
-  style: () => ({ ...liveSettings }),
-})
+const liveStyle = () => ({ ...liveSettings })
+
+const stepMarkerTool = createStepMarkerTool({ style: liveStyle })
+const placeTool = createStepMarkerPlaceTool({ style: liveStyle, penStyle: currentPenStyle })
 
 const STEP_MARKER_CURSOR = {
   svg:
@@ -58,8 +63,10 @@ export default defineModule({
   id: MODULE_ID,
   version: '1.0.1',
   settingsSchema,
+  mcpGuide: STEP_MARKER_MCP_GUIDE,
 
   setup(ctx) {
+    ctx.onDispose(trackPenStyle())
     const apply = (s: StepMarkerSettings) => {
       liveSettings.size = s.size
       liveSettings.fillColor = s.fillColor
@@ -111,6 +118,7 @@ export default defineModule({
         component: StepMarkerSettingsPanel,
       },
     ],
+    mcpTools: [placeTool],
     locales: {
       en,
       'zh-Hant': zhHant,

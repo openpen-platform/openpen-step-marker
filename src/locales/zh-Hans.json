@@ -6,5 +6,8 @@
     "size": "尺寸",
     "fillColor": "填充颜色",
     "textColor": "文字颜色"
+  },
+  "mcp": {
+    "placeTitle": "放步骤标记"
   }
 }

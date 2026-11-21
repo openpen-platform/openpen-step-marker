@@ -6,5 +6,8 @@
     "size": "Size",
     "fillColor": "Fill color",
     "textColor": "Text color"
+  },
+  "mcp": {
+    "placeTitle": "Place step marker"
   }
 }

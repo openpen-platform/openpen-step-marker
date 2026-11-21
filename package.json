@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@openpen/build": "1.1.0",
-    "@openpen/module-api": "1.2.0",
+    "@openpen/module-api": "^1.6.0",
     "openpen-cli": "1.1.0",
     "typescript": "^6.0.3",
     "vitest": "^2.1.9",

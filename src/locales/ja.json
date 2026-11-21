@@ -6,5 +6,8 @@
     "size": "サイズ",
     "fillColor": "塗りつぶし色",
     "textColor": "文字色"
+  },
+  "mcp": {
+    "placeTitle": "ステップ番号を置く"
   }
 }
