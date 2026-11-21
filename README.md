@@ -49,13 +49,13 @@ than filling the gap.
 
 ## Settings
 
-Open OpenPen's settings and choose the **Step Marker** panel.
+Click the small arrow next to the Step Marker button in the control bar. The options popover changes the look of the next marker straight away; colors are one-click swatches. A color saved earlier that is not one of the swatches stays as one extra swatch at the front of its row.
 
 | Setting | Values | Default | Description |
 | --- | --- | --- | --- |
 | **Size** | 16 to 64 | 32 | Diameter of the marker in pixels |
-| **Fill color** | any color | `#e05020` | Color of the circle |
-| **Text color** | any color | `#ffffff` | Color of the number |
+| **Fill color** | swatches (or the stored color) | `#e05020` | Color of the circle |
+| **Text color** | swatches (or the stored color) | `#ffffff` | Color of the number |
 
 ## License
 

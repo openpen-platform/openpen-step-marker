@@ -5,9 +5,23 @@
   "settings": {
     "size": "サイズ",
     "fillColor": "塗りつぶし色",
-    "textColor": "文字色"
+    "textColor": "文字色",
+    "current": "現在の色"
   },
   "mcp": {
     "placeTitle": "ステップ番号を置く"
+  },
+  "options": {
+    "label": "ステップ番号のオプション"
+  },
+  "colors": {
+    "f87171": "赤",
+    "fb923c": "オレンジ",
+    "fbbf24": "黄",
+    "34d399": "緑",
+    "60a5fa": "青",
+    "818cf8": "藍",
+    "f472b6": "ピンク",
+    "ffffff": "白"
   }
 }

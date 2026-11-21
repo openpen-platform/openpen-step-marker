@@ -39,12 +39,8 @@ describe('module contract', () => {
     expect('defaultGroup' in tool).toBe(false)
   })
 
-  it('contributes a settings panel', () => {
-    const panels = module.contributes.settingsPanels
-    expect(panels).toBeDefined()
-    const panel = panels!.find((p) => p.id === 'step-marker-settings')
-    expect(panel).toBeDefined()
-    expect(panel!.component).toBeDefined()
+  it('does not contribute a settings-window panel (options live in the control-bar popover)', () => {
+    expect(module.contributes.settingsPanels ?? []).toHaveLength(0)
   })
 
   it('provides locale maps for all four supported languages', () => {

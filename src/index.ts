@@ -6,7 +6,7 @@
  *     filled disc with a centered number; the host fallback polyline cannot).
  *   - A crosshair-style cursor for `ui.cursors`.
  *   - A tool button in the control bar 'tools' group.
- *   - A settings panel (size + fill / text color) for `ui.settings.panels`.
+ *   - The options popover (fill / text color swatches, size) behind the button's caret.
  *   - The MCP tool `place` (`openpen.step-marker__place` for agents) and its
  *     usage guide: an agent places the same marker stroke a manual click makes.
  *
@@ -25,7 +25,6 @@ import {
 import { createStepMarkerPlaceTool, STEP_MARKER_MCP_GUIDE } from './mcp-place-tool'
 import { currentPenStyle, trackPenStyle } from './pen-style'
 import StepMarkerToolButton from './StepMarkerToolButton.vue'
-import StepMarkerSettingsPanel from './StepMarkerSettingsPanel.vue'
 import en from './locales/en.json'
 import zhHant from './locales/zh-Hant.json'
 import zhHans from './locales/zh-Hans.json'
@@ -104,18 +103,6 @@ export default defineModule({
         component: StepMarkerToolButton,
         defaultGroup: 'tools',
         groupHint: { separator: 'auto' },
-      },
-    ],
-    settingsPanels: [
-      {
-        id: 'step-marker-settings',
-        label: {
-          en: 'Step Marker',
-          'zh-Hant': '步驟標記',
-          'zh-Hans': '步骤标记',
-          ja: 'ステップ番号',
-        },
-        component: StepMarkerSettingsPanel,
       },
     ],
     mcpTools: [placeTool],

@@ -5,9 +5,23 @@
   "settings": {
     "size": "尺寸",
     "fillColor": "填充颜色",
-    "textColor": "文字颜色"
+    "textColor": "文字颜色",
+    "current": "当前"
   },
   "mcp": {
     "placeTitle": "放步骤标记"
+  },
+  "options": {
+    "label": "步骤标记选项"
+  },
+  "colors": {
+    "f87171": "红",
+    "fb923c": "橙",
+    "fbbf24": "黄",
+    "34d399": "绿",
+    "60a5fa": "蓝",
+    "818cf8": "靛",
+    "f472b6": "粉",
+    "ffffff": "白"
   }
 }
