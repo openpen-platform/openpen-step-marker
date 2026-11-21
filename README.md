@@ -13,7 +13,7 @@ step-by-step annotations such as walkthroughs and tutorials.
 
 ## Install
 
-Requires OpenPen 1.0.0 or later.
+Requires OpenPen 1.7.0 or later.
 
 Install from the plugin catalog, then restart OpenPen:
 
