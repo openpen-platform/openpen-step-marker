@@ -1,9 +1,27 @@
 {
   "id": "@openpen/step-marker",
   "name": "Step Marker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "OpenPen",
-  "description": "Click to drop sequentially numbered circular markers for step-by-step annotations. Numbering follows the canvas marker count, so undo automatically rolls the next number back.",
+  "description": "Drops sequentially numbered circular markers on click for step-by-step annotations, numbering by canvas marker count so undo rolls the next number back.",
+  "descriptionLocalized": {
+    "zh-Hant": "點一下放下依序編號的圓形標記，適合逐步說明操作步驟。",
+    "zh-Hans": "点一下放下依序编号的圆形标记，适合逐步说明操作步骤。"
+  },
+  "icon": ".github/marketplace/icon.png",
+  "screenshots": [
+    {
+      "src": ".github/marketplace/cover.png",
+      "alt": "Markers numbered 1, 2 and 3 sit on a settings page."
+    },
+    {
+      "src": ".github/readme-demo.gif",
+      "alt": "Numbered markers are dropped one by one; undo rolls the next number back."
+    }
+  ],
   "minAppVersion": "1.0.0",
-  "renderer": "dist/renderer.js"
+  "renderer": "dist/renderer.js",
+  "changelog": [
+    "1.0.1: Marketplace icon, cover image and Traditional and Simplified Chinese descriptions."
+  ]
 }

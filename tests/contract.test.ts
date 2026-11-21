@@ -8,7 +8,7 @@ describe('module contract', () => {
   })
 
   it('declares a version', () => {
-    expect(module.version).toBe('1.0.0')
+    expect(module.version).toBe('1.0.1')
   })
 
   it('contributes a step-marker tool with a custom renderStroke', () => {

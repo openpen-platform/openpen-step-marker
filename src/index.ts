@@ -56,7 +56,7 @@ const STEP_MARKER_CURSOR = {
 
 export default defineModule({
   id: MODULE_ID,
-  version: '1.0.0',
+  version: '1.0.1',
   settingsSchema,
 
   setup(ctx) {
